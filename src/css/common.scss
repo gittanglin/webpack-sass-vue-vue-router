@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+/*todo =====================================css reset start=====================================*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+  -webkit-text-size-adjust: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f4;
+  font-family: Arial;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+ins, a {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+input, textarea {
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.css {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+/*todo =====================================css reset end=====================================*/
+//flexible设置
+$baseFontSize: 37.5px !default;
+
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+
+html {
+  font-size: pxToRem($baseFontSize);
+}
+
+/*todo =====================================公用样式 start=====================================*/
+
+.padding-left-15-hr2 {
+  border-bottom: 1px solid #DDDEE3;
+  margin-left: pxToRem(15px);
+}
+
+.hr {
+  border-bottom: 1px solid #DDDEE3;
+}
+
+.view {
+  background: #fff;
+}
+
+/*todo =====================================公用样式 end =====================================*/
+
+/*todo =====================================重写mint-ui框架样式start=====================================*/
+
+.mint-msgbox {
+  width: pxToRem(270px) !important;
+  background: #fff;
+  border-radius: 3px !important;
+  font-size: pxToRem(16px) !important;
+}
+
+.mint-msgbox-title {
+  padding-top: pxToRem(24px);
+  letter-spacing: 3px;
+  color: #030303 !important;
+  font-size: pxToRem(17px) !important;
+  font-weight: normal !important;
+}
+
+.mint-msgbox-message {
+  color: #030303 !important;
+  margin: 0;
+  letter-spacing: 3px;
+  text-align: center;
+  line-height: pxToRem(36px);
+  padding-bottom: pxToRem(20px);
+}
+
+.mint-msgbox-cancel {
+  width: 50%;
+  height: pxToRem(44px) !important;
+  font-size: pxToRem(17px);
+  color: #007AFF;
+  border-right: 2px solid #ddd !important;
+}
+
+.mint-msgbox-btns {
+  font-weight: 700 !important;
+  line-height: pxToRem(44px) !important;
+  height: pxToRem(44px) !important;
+}
+
+.mint-msgbox-content {
+  min-height: 0 !important;
+}
+
+.mint-msgbox-confirm {
+  width: 50%;
+  font-size: pxToRem(17px);
+  color: #007AFF !important;
+  border-right: 1px solid #ddd;
+}
+
+.mint-toast {
+  padding: pxToRem(10px) !important;
+}
+
+.mint-toast-text {
+  font-size: pxToRem(14px) !important;
+}
+
+.mint-indicator-wrapper {
+  height: pxToRem(120px) !important;
+  width: pxToRem(120px) !important;
+  background: rgba(0, 0, 0, 0.50) !important;
+  border-radius: pxToRem(5px) !important;
+  padding: 0 !important;
+}
+
+.mint-indicator-text {
+  font-size: pxToRem(13px) !important;
+  padding-top: pxToRem(15px) !important;
+  color: #FFFFFF;
+  margin-top: 0 !important;
+}
+
+.mint-spinner-fading-circle {
+  width: pxToRem(36px) !important;
+  height: pxToRem(36px) !important;
+}
+
+.mint-indicator-spin {
+  padding-top: 32% !important;
+}
+
+.mint-spinner-fading-circle-circle::before {
+  width: 8% !important;
+  height: 24% !important;
+  background-image: radial-gradient(99% 49%, #FFFFFF 95%, rgba(255, 255, 255, 0.10) 96%) !important;
+  border-radius: 5px !important;
+}
+
+.mint-loadmore-bottom {
+  padding-top: pxToRem(20px) !important;
+  span {
+    font-size: pxToRem(15px) !important;
+    color: #8E8E93 !important;
+  }
+}
+
+/*todo =====================================重写框架样式 end=====================================*/

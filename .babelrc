@@ -1,0 +1,17 @@
+{
+  presets: [
+    'es2015'
+  ],
+  plugins: [
+    'transform-runtime',
+    [
+      "component",
+      [
+        {
+          "libraryName": "mint-ui",
+          "style": true
+        }
+      ]
+    ]
+  ]
+}

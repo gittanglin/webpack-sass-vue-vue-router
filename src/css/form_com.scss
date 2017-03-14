@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.form {
+  background: #FFFFFF;
+  width: 100%;
+  .padding {
+    padding: pxToRem(15px) 0 pxToRem(14px) 0;
+  }
+  .form-row {
+    .form-text {
+      @extend .padding;
+      width: 25%;
+      display: inline-block;
+      label {
+        font-size: pxToRem(15px);
+        color: #95999F;
+      }
+    }
+    .form-val {
+      @extend .padding;
+      width: 70%;
+      display: inline-block;
+      label {
+        font-size: pxToRem(15px);
+        color: #000000;
+      }
+    }
+  }
+}
